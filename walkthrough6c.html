@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiana Sepasian - Task 3</title>
+
+</head>
+<body>
+    <form id="calcForm">
+      Number 1 : <input type="text" id="n1" value="">
+      Number 2 : <input type="text" id="n2"  value="">
+      <button type="submit">SUM</button>
+    </form>
+<p id="result"></p>
+</body>
+<script>
+  //1. FORM HANDLING
+  //d. use the function addEventListener on button
+  document.getElementById("calcForm")
+          .addEventListener('submit', function (event) {
+            //e. to stop the refresh of the page
+            event.preventDefault();
+    //a. fetch the variables(n1, n2)
+    //& make them integer(parseInt)
+    let n1 = parseInt(document.getElementById("n1").value);
+    let n2 = parseInt(document.getElementById("n2").value);
+    //b. apply the logic
+    let sum = n1 + n2;
+    //c. to print the result in a given section/ innerHTML
+    document.getElementById("result").innerText = "Sum is: "+sum;
+  });
+
+
+
+
+</script>
+</html>

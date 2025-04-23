@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiana Sepasian - Task 2</title>
+  <script>
+    //1.Substring => .substring(start,end)
+    // Hello World
+    // 012345.....
+    // if we just want to print the Hello we should just put from (0,5)
+    // the other section it can be (6,10)
+    let username = "George Brown";
+    let username1 = "George**Brown";
+    console.log("First Name : " ,username.substring(0,6));
+    console.log("First Name : " ,username.substring(7,12));
+    //indexOf => Position of the character where it starts
+    //SYNTAX => varName.indexOf("symbol"+no. of times a
+    // symbols is repeated)
+    console.log("Position: ",username.indexOf(" ")+1 );
+    console.log("Position: ",username1.indexOf("**")+2 )// number of symbols that repated it is so important
+    //1. toUpperCase(), 2) .toLowerCase()
+    console.log(username.toUpperCase());
+    console.log(username.toLowerCase());
+    //Function => common var to generate result
+    //syntax =>
+    // function nameFunction(args/input){
+    //return res/output
+    //}
+    function getFirstName(username){
+      let firstName = username.substring(0,6)
+      console.log("First Name: " + firstName)
+      return firstName
+    }
+    //call
+    getFirstName("George Brown");
+    getFirstName("Mikel Smith");
+  </script>
+</head>
+<body>
+
+</body>
+</html>

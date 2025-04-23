@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiana Sepasian - Task 2</title>
+  <script>
+    //1. strict equality ( === )
+    function isTen(num){
+      return num === 10;
+    }
+    console.log(isTen(10));//true
+    console.log(isTen(8));//false
+    console.log(isTen("7"));//false
+    //2. default parameters
+    function sum(n1=5, n2=10){
+      return "Sum is: " + parseInt(n1 + n2);
+    }
+    console.log(sum());//15
+    console.log(sum(2,5))//7
+    console.log(sum(3,4));//7
+    //3. rest parameters (...) or spread operator
+    const printArray = (...args) => console.log(args);
+    printArray(1, 2, 3, 4, 5); //[1,2,3,4,5]
+    printArray("a", "b"); //[a,b]
+    printArray();//[]
+  </script>
+</head>
+<body>
+
+</body>
+</html>

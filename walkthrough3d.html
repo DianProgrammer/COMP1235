@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiana Sepasian - Task 4</title>
+
+
+  <style>
+
+      .wrapper{
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-auto-rows: minmax(100px, 110px);
+          gap: 2px;
+
+
+      }
+      div, article{
+          border:3px solid hotpink;
+      }
+      .item1{
+          display: grid;
+          /******************
+          subgrid = repeat(3, 1fr)
+          **********************/
+          grid-template-columns: subgrid;
+          grid-column: 1/4;
+          gap: 10px;
+          /****** Never use the property padding in grid layout *******/
+          padding: 10px;
+
+      }
+
+  </style>
+
+
+</head>
+<body>
+<div class="wrapper">
+    <div class="item1">
+        <article>   a   </article>
+        <article>   b   </article>
+        <article>   c   </article>
+    </div>
+    <div class="item2">
+        Two
+        <p>I have some more content in.</p>
+        <p>This makes me taller than 100 pixels.</p>
+    </div>
+    <div class="item3">Three</div>
+    <div class="item4">Four</div>
+    <div class="item5">Five</div>
+</div>
+
+</body>
+</html>

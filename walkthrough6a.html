@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiana Sepasian - Task 1</title>
+  <script>
+    //1. function expression
+    // removing the name and assigning the var to the given function
+    let print = function (start, stop){
+      //for loop
+      let str = "";
+      for (;start<=stop;start++){
+        str += start + ", ";
+
+      }
+      return str;
+
+    }
+    console.log(print(1,10));
+    //2. arrow functions
+    let foo = () => "Hello";
+    let foo1 = () => {return "Hello"; };
+    let foo2 = (name) => {return "Hello" +"---"+  name; };
+    console.log(foo()); //Hello
+    console.log(foo1()); //Hello
+    console.log(foo2("Kiana")); //Hello---Kiana
+    //3. callback functions
+    //a. fetch the name of the user
+    let printName = (name) => {
+      return name;
+    }
+    let printAge = (age) => {
+      return age;
+    }
+    //b. great the user by taking help of callback
+    function greet(name, callback){
+      return "Hello "+callback(name)+"!";
+
+    }
+    console.log(greet("Kiana", printName));
+    console.log(greet(19, printAge));
+    document.write(greet("Kiana", printName));
+  </script>
+</head>
+<body>
+
+</body>
+</html>

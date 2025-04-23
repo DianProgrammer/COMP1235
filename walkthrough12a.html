@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiana Sepasian - Task 1</title>
+    <script src="walkthrough12a.js"></script>
+    <script>console.log("GBC")</script>
+    <!-----------TYPESCRIPT(.ts)----------------------->
+    <script src="https://cdn.jsdelivr.net/npm/typescript@5.3.3"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/text-typescript@1.3.0"></script>
+    <script type="text/typescript">console.log("GBC")
+ //create a function => add
+function add(a:number ,b: number): number{
+    return a + b;
+}
+console.log("Add: ", add(2,5))//7
+console.log("Add: ", add(2,"5"))//25
+//2. Create Interface1 Walker
+interface Walker {
+    readonly age: number;
+    do_walk(age: number);
+
+
+}
+//3. Create Class "Mammal"
+//Display the types of access modifiers
+//3 p's=>
+//1. Public
+//2. Private
+//3. Protected
+
+
+
+class Mammal {
+    public height: number;
+    private dinner: string;
+    protected money: number;
+
+
+
+    //1. Create the Method
+    constructor(p_height: number,p_dinner: string, p_money: number){
+        this.height = p_height;
+        this.dinner = p_dinner;
+        this.money = p_money;
+
+
+    }
+
+}
+const m1 = new Mammal(7.7, "Meat", 1000);
+        console.log(m1);//RUNTIME
+        console.log(m1.height);
+        console.log(m1.dinner);// because dinner is the private property
+        console.log(m1.money);//because money is the protected property
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

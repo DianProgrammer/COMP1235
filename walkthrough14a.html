@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiana Sepasian - Tasks</title>
+</head>
+<body>
+<div id="root"></div>
+<!-- React library -->
+<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<!-- React DOM library -->
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<!-- Babel standalone to compile JSX -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+  //1.Creating a var
+  const TAX = 0.13
+  const musicData = [{title:"Song A"},{title:"Song B"},{title:"Song C"}]
+  //2.Creating a component
+  function Music(props){
+    const songs = props.musicData.map(
+            (m, index) => <li>{m.title}</li>
+    )
+    return <ul>{songs}</ul>
+
+  }
+  //3.Usage of component
+  const App = () => {
+    return (<div>
+      <h1>All songs - Kiana Sepasian</h1>
+      <Music musicData={musicData}></Music>
+    </div>);
+  }
+  //4.Render the data
+  ReactDOM.render(<App />, document.getElementById('root'));
+
+
+
+</script>
+</body>
+</html>
